@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" class="navbar">
+  <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    *ngIf="isHandset$ | async">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <div class="logo">
+    <span>Barangay Bagongpook Online Portal</span>
+  </div>
+  <div class="nav-menu">
+    <ul>
+      <li>Residency</li>
+      <li>Indigency</li>
+      <li>Clearance</li>
+      <li>Login</li>
+    </ul>
+  </div>
+</mat-toolbar>
