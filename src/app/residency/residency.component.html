@@ -1,0 +1,43 @@
+<div id="residency-container">
+    <!-- If not logged in, display only the info about the application and how to -->
+    
+    <!-- If logged in, display the current user's applications and option to submit new application -->
+    <div class="table-container">
+        <h1>My Applications</h1>
+        <table mat-table [dataSource]="residencyApplicationData" onRowC>
+            <ng-container matColumnDef="sn">
+                <th mat-header-cell *matHeaderCellDef>S/N</th>
+                <td mat-cell *matCellDef="let item">{{ item.sn }}</td>
+            </ng-container>
+            <ng-container matColumnDef="referenceNo">
+                <th mat-header-cell *matHeaderCellDef>Reference No.</th>
+                <td mat-cell *matCellDef="let item">
+                    <a [routerLink]="'/residency/get/' + item.referenceNo" class="mat-row-link">
+                        {{ item.referenceNo }}
+                    </a>
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="applicationDate">
+                <th mat-header-cell *matHeaderCellDef>Date Applied</th>
+                <td mat-cell *matCellDef="let item">{{ item.applicationDate }}</td>
+            </ng-container>
+            <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef>Status</th>
+                <td mat-cell *matCellDef="let item">{{ item.status }}</td>
+            </ng-container>
+            <ng-container matColumnDef="remarks">
+                <th mat-header-cell *matHeaderCellDef>Remarks</th>
+                <td mat-cell *matCellDef="let item">{{ item.remarks }}</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="residencyDisplayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: residencyDisplayedColumns;"></tr>
+        </table>
+        <mat-paginator [length]="10" [pageSize]="3" aria-label="Select page"></mat-paginator>
+    </div>
+
+    <div class="table-options-container">
+        <button mat-raised-button color="primary">Submit New Application</button>
+        <button mat-raised-button color="primary">Cancel Application</button>
+    </div>
+</div>

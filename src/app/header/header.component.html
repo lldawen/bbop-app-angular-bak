@@ -7,14 +7,15 @@
     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
   </button>
   <div class="logo">
-    <span>Barangay Bagongpook Online Portal</span>
+    <span><a routerLink="/">Barangay Bagongpook Online Portal</a></span>
   </div>
   <div class="nav-menu">
     <ul>
-      <li>Residency</li>
+      <li><a routerLink="/residency" routerLinkActive="active" ariaCurrentWhenActive="page">Residency</a></li>
       <li>Indigency</li>
       <li>Clearance</li>
       <li>Login</li>
     </ul>
   </div>
 </mat-toolbar>
+<router-outlet></router-outlet>

@@ -12,16 +12,32 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ResidencyFormComponent } from './residency-form/residency-form.component';
+import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
+import { MainComponent } from './main/main.component';
+import { ResidencyComponent } from './residency/residency.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    DashboardComponent
+    DashboardComponent,
+    ResidencyFormComponent,
+    HomeComponent,
+    FooterComponent,
+    MainComponent,
+    ResidencyComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +50,14 @@ import { MatMenuModule } from '@angular/material/menu';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
     MatGridListModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatCardModule,
     MatMenuModule,
   ],

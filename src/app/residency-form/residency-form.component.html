@@ -1,0 +1,52 @@
+<div id="residency-form-container">
+    <h1>New Application for Certificate of Residency</h1>
+    <form id="residency-form" action="POST">
+        <p>
+            <mat-form-field appearance="fill">
+                <mat-label>Full Name</mat-label>
+                <input matInput disabled>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="fill">
+                <mat-label>Age</mat-label>
+                <input matInput disabled>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="fill">
+                <mat-label>Address</mat-label>
+                <textarea matInput disabled></textarea>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="fill">
+                <mat-label>Contact No</mat-label>
+                <input matInput disabled>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="fill">
+                <mat-label>Place of Birth</mat-label>
+                <textarea matInput></textarea>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="fill">
+                <mat-label>Purpose</mat-label>
+                <mat-select>
+                    <mat-option value="option">Option</mat-option>
+                </mat-select>
+                <mat-hint align="end">Here is the dropdown arrow ^</mat-hint>
+            </mat-form-field>
+        </p>
+        <!-- <p>
+            <mat-form-field appearance="fill">
+                <mat-label>Full Name</mat-label>
+                <input matInput placeholder="First Name" [formControl]="fullName" required>
+                <mat-error *ngIf="fullName.invalid"> {{ getErrorMessage() }}</mat-error>
+            </mat-form-field>
+        </p> -->
+        <button id="newResidencyBtn" mat-raised-button>Submit</button>
+    </form>
+</div>
